@@ -19,9 +19,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Preview
-<video width="600" controls>
-  <source src="https://github.com/onderakbulut/cine-app/raw/main/preview.mp4" type="video/mp4">
-</video>
+![Cine app](preview.gif)
 
 ## Features
 - Fetch api
