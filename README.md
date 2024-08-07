@@ -19,7 +19,9 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Preview
-<video width="600" controls> <source src="resources/preview.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
+<video width="600" controls>
+  <source src="https://github.com/onderakbulut/cine-app/raw/main/preview.mp4" type="video/mp4">
+</video>
 
 ## Features
 - Fetch api
