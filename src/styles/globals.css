@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-full flex flex-col bg-black;
+}
+
+.main {
+  @apply flex-1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.movie-detail {
+  background: url('/movie-detail.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, .6);
+}
+
+.main {
+  @apply bg-black;
+}
+
+/* transition css */
+
+@keyframes slide-in {
+  from {
+    translate: 100vw 0;
+  }
+}
+
+@keyframes slide-out {
+  to {
+    translate: 100vw 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    translate: 0 100vh;
+  }
+}
+
+@keyframes slide-down {
+  to {
+    translate: 0 100vh;
+  }
+}
+
+.movie-poster {
+  view-transition-name: movie-poster;
+}
+
+::view-transition {
+  background: black;
+}
+
+::view-transition-old(movie-poster) {
+  animation-duration: 180ms;
+  animation-name: slide-down;
+}
+
+::view-transition-new(movie-poster) {
+  animation-name: slide-up;
+}
+
+
+.featured-slider {
+  view-transition-name: featured-slider;
+}
+
+::view-transition-old(featured-slider) {
+  animation-duration: 180ms;
+  animation-name: fade-out;
+}
+
+::view-transition-new(featured-slider) {
+  animation-name: slide-in;
+}
+
+.movie-slider:nth-of-type(1) {
+  view-transition-name: movie-slider;
+}
+
+::view-transition-old(movie-slider) {
+  animation-duration: 180ms;
+  animation-name: fade-out;
+}
+
+::view-transition-new(movie-slider) {
+  animation-name: slide-in;
+}
