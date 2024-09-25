@@ -19,7 +19,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Preview
-![Cine app](preview.gif)
+![screenshot](https://github.com/user-attachments/assets/a8e2c00d-c863-42a2-bd26-2dc1e63cbae0)
 
 ## Features
 - Fetch api
